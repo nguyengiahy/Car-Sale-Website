@@ -1,0 +1,575 @@
+/*
+	This css file is used to style 5 pages of assignment 1 : index.html, about.html, enquire.html, 
+	product.html, enhancements.html;
+*/
+
+*{
+	font-family: calabri, sans-serif;
+	color: #2F4F4F;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #FEF9E7;
+	height: 100%;
+	width: 100%;
+}
+
+body,html{
+	scroll-behavior: smooth;
+}
+
+/*Header and navigation bar configurations*/
+#logo img{
+	float: left;
+}
+
+header{
+	height: 75px;
+}
+
+nav{
+	background-color: #000;
+	opacity: 0.8;
+	letter-spacing: .25em;
+	height: 75px;
+	width: 100%;
+	padding: 0 15px;
+	position: fixed;
+	z-index: 10;
+}
+
+nav ul{
+	width: 60%;
+	height: 100%;
+	float: right;
+	margin: 0;
+}
+
+nav ul li{
+	list-style: none;
+	float: left;
+	height: 100%;
+}
+
+nav ul li a{
+	display: block;
+	padding: 0em 0.75em;
+	text-decoration: none;
+	height: 100%;
+	color: #fff;
+	transition: 0.6s;
+	line-height: 75px;
+}
+
+nav ul li a:hover, nav ul li .active{
+	color:#fff;
+    background-color:#008b8b;
+}
+
+/*index.html : jumbotron section configuration*/
+.jumbotron{
+	background-image: url("images/jumbotron.png");
+	clear: both;
+	width: 100%;
+	height: 110vh;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	padding-top: 10px;
+}
+
+.jumbotron h1{
+	color: #E5E8E8;
+	padding: .5em 0;
+	text-align:center;
+    font:700 60px Arial,sans-serif;
+    margin: 2em 0 0 0;
+    background: url('images/animated_text_fill.png') repeat-y;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: aitf 80s linear infinite;
+	-webkit-backface-visibility: hidden;
+}
+
+.jumbotron span{
+	display: block;
+	font-size: .35em;
+	color: #E5E8E8;
+	text-align:center;
+}
+
+@-webkit-keyframes aitf{
+	0%{
+		background-position: 0% 50%;
+	}
+	100%{
+		background-position: 100% 50%;
+	}
+}
+
+
+button, .button{
+	background-color:#008b8b;
+    color:#fff;
+    padding:10px 50px;
+    border:none;
+    text-decoration:none;
+    transition: 0.6s;
+}
+
+button:hover, .button:hover{
+	text-decoration:none;
+    color:#fff;
+    background-color:#000;
+    cursor: pointer;
+}
+
+.buyBtn, #switchEnhancement{
+	padding: 20px 20px;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#scrollToTopButton{
+	position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+    border: 0;
+    width: 50px;
+    height: 50px;
+    box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.3);
+    font-size: xx-large;
+    outline: 0;
+    visibility: hidden;
+    transform: scale(0);
+    opacity: 0;
+    transition: 0.2s;
+}
+
+#scrollToTopButton.show{
+	opacity: 1;
+	transform: scale(1);
+	visibility: visible;
+}
+
+/*index.html : content section configuaration*/
+#section1, #section2, #section3{
+	width: 30%;
+	float: left;
+	margin: 1em;
+	text-align: justify;
+}
+
+section h2, section img{
+	width: 100%;
+	text-align: center;
+}
+
+/*index.html : slideshow*/
+.slide-wrapper{
+	clear: both;
+	text-align: center;
+	padding: 2em 0;
+}
+
+.slideshow{
+	width: 700px;
+	height: 400px;
+	overflow: hidden;
+	clear: both;
+}
+
+.middle{
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.buttons{
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translate(-50%);
+	display: flex;
+}
+
+.bar:hover{
+	background-color: #fff;
+}
+
+.bar{
+	width: 50px;
+	height: 10px;
+	border: 2px solid #fff;
+	margin: 6px;
+	cursor: pointer;
+	transition: 0.6s;
+}
+
+input[name="r"]{
+	position: absolute;
+	visibility: hidden;
+}
+
+.slides{
+	width: 500%;
+	height: 100%;
+	display: flex;
+}
+
+.slide{
+	width: 20%;
+	transition: 0.6s;
+}
+
+.slide img{
+	width: 100%;
+	height: 100%;
+}
+
+#r1:checked ~ .s1{
+	margin-left: 0;
+}
+
+#r2:checked ~ .s1{
+	margin-left: -20%;
+}
+
+#r3:checked ~ .s1{
+	margin-left: -40%;
+}
+
+#r4:checked ~ .s1{
+	margin-left: -60%;
+}
+
+#r5:checked ~ .s1{
+	margin-left: -80%;
+}
+
+/*index.html : need help section*/
+#section4{
+	background-color: #F2F3F4;
+	text-align: center;
+}
+
+#section4 div{
+	margin: 0;
+	padding: 3em 0;
+}
+
+#need-help{
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 2em;
+}
+
+.align-center{
+	text-align: center;
+}
+
+/*about.html : description list*/
+dl{
+	width: 60%;
+	float: left;
+}
+
+dt {
+    clear: left;
+	float: left;
+    width: 40%;
+	text-align: right;
+    font-weight: bold;
+}
+
+dt::after {
+    content: " :"; 
+}
+
+dd {
+    width: 55%;
+	margin-left: 50%;
+	text-align: left;
+}
+
+figure img{
+	width: 30%;
+	height: auto;
+	float: right;
+	border: 3px double #000;
+	margin: 20px;
+}
+
+/*about.html : timetable*/
+.timetable{
+	clear: both;
+	text-align: center;
+	margin: 2em 0;
+}
+
+table{
+	width: 80%;
+	margin: 0 auto;
+	border: #FFF;
+    border-radius:5px;
+}
+table th {
+    background-color:#2e2a2a;
+    height:20%;
+    width:2%;
+    padding:2%;
+    color:#fff;
+    border:2px solid #000;
+    text-align:center;
+    font-weight:700;
+}
+
+table td {
+    align-content:center;
+    text-align:center;
+    background-color:#d3d3d3;
+    color:#202020;
+    width:1%;
+    padding:1%;
+    border:2px solid #000;
+}
+
+/*product.html : aside section*/
+aside{
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    border: 2px inset purple;
+    border-radius: 10px;
+    margin: 1em;
+    padding: 1em;
+    float: right;
+    box-shadow: 2px 2px 2px #aaaaaa;
+    width: 25%;
+    min-height: 350px;
+    text-align: left;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 40px;
+}
+
+li{
+	text-align: left;
+}
+
+#aside_table table{
+    font-size: .85em;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+/*h1 elements on product.html formatted with font variant, size, font family etc..*/
+h1{
+	font: normal normal bold 2em 'Arial',sans-serif;
+}
+
+/*product.html : product contents*/
+.product{
+	clear: left;
+	width: 70%;
+	text-align: left;
+}
+
+.text{
+	width: 60%;
+	float: left;
+}
+.product h2, .product h3, .product p, .product li, .product div{
+	text-align: left;
+}
+
+.choice{
+	display: inline;
+}
+
+.product select{
+	margin-left: 3em;
+}
+
+.img_product{
+	width: 25%;
+	margin: 3em;
+}
+
+/*enquire.html : enquiry form*/
+form {
+    width:50%;
+    margin: 3em auto;
+}
+
+legend{
+	display: block;
+	width: 100%;
+	border-bottom: 1px solid #e5e5e5;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+legend p{
+	text-align: left;
+}
+
+fieldset {
+    border: 0;
+}
+
+form label:not(#cmt_text) {
+    margin-left:15px;
+    font:13px Arial;
+}
+
+form fieldset p label{
+	width: 20%;
+}
+
+form h1 {
+    text-decoration:none;
+    margin-left:15px;
+}
+
+input[type=text], input[type=email], select,textarea {
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:4px;
+    box-sizing:border-box;
+    margin-top:6px;
+    margin-bottom:16px;
+    resize:vertical;
+    background-color:#fff;
+    color:#000;
+    margin-left: 10px;
+}
+
+input[type=radio] {
+    margin-left:5%;
+}
+
+/*enhancement.html : page heading*/
+#ehm-title{
+	border-bottom: 2px solid #e5e5e5;
+	margin: .5em auto 2em auto;
+	width: 30%;
+}
+
+/*assignment 2 enquire.html*/
+.extraOptions{
+	list-style: none;
+}
+
+#mercCheckbox + label, #audiCheckbox + label, #bmwCheckbox + label, #teslaCheckbox + label{
+	padding: 15px 5px;
+	background-color: #704913;
+	opacity: 1;
+	color: #fff;
+}
+
+/*Footer*/
+footer p{
+	clear: both;
+	background-color: #008b8b;
+	padding: 3em 0;
+	text-align: center;
+	margin: 0;
+	font-size: small;
+}
+footer a{
+	display: block;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+  
+/* Modal Content */
+.modal-content {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 60%;
+    box-shadow: 0 4px 8px 0 #00000033,0 6px 20px 0 #00000030;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+  
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+  
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+  
+  /* The Close Button */
+.close {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover, .close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+.modal-header {
+    padding: 2px 16px;
+    background-color: #008b8b;
+    color: #fff;
+    text-align: center;
+}
+  
+.modal-body {
+    padding: 1em;
+    text-align: center;
+    color: #008b8b;
+    background-color: #ccc;
+}
+  
+.modal-footer {
+    padding: 1em;
+    background-color: #008b8b;
+}
+
+/*Switch enhancement button*/ 
+#switchEnhancement a{
+  	text-decoration: none;
+  	color: #fff;
+}
+
+
+/*For manager page tables*/
+#searchResult th{
+	padding-left: 0;
+}
