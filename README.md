@@ -11,6 +11,7 @@ This is a web-based application for car dealers to perform actions such as:
 
 ## Language used
 Front-end: HTML, CSS, JavaScript
+
 Back-end: PHP, MySQL, JavaScript
 
 ## Implementation
